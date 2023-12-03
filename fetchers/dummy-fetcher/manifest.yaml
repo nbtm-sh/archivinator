@@ -1,0 +1,21 @@
+fetcher:
+  name: dummy
+  displayname: dummy fetcher
+  version: 1.0
+  inputs:
+    - name: input
+      displayname: test input
+      type: string
+      defaultvalue: ${global.dataprefix}/test.txt
+    - name: api
+      displayname: api key
+      type: string
+      defaultvalue: ${global.app.dummy.api}
+install:
+  dependencies:
+    - __future__
+global:
+  - name: "apikey"
+    displayname: "api key"
+    type: string
+    defaultvalue: "0123456789abcedf"
